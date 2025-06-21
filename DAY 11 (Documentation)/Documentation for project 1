@@ -1,0 +1,124 @@
+                Student Performance Analyzer – Documentation
+
+1. Project Overview
+The Student Performance Analyzer is a self‑contained JavaScript (ES6+) console application that records a student’s basic profile, computes key academic Info., and prints formatted reports.It demonstrates fundamental programming constructs—variables, arrays, functions, loops, objects, conditionals, and the switch statement—while enforcing modern best practices with 'use strict'.
+
+2. Objectives
+-> Calculate total & average marks from a set of subject scores.
+-> Assign an academic grade based on the average.
+-> Determine scholarship eligibility against configurable criteria.
+-> Provide multiple report styles (Basic, Detailed, Scholarship Check)
+
+3. Key Features
+Dynamic Aggregation:
+Reusable total() and average() arrow functions process arbitrarily long score arrays.
+
+Grade Assignment:
+A switch(true) pattern converts averaged marks into letter grades (A–F) with clear ranges.
+
+Scholarship Logic:
+Combines average‑threshold and per‑subject checks via logical operators.
+
+Summary Method:
+An object‑oriented student.Summary() bundles results into a single, human‑readable report.
+
+Report Selector:
+User‑set reportType drives a final switch for Basic, Detailed, or Scholarship outputs.
+
+Input Validation Loop:
+for loop screens non‑numeric or negative score entries, using continue/break appropriately.
+
+4. Technologies & Runtime
+Language: JavaScript (ES6+)
+Execution: Browser console or Node ≥ v12.
+
+5. Installation & Setup
+-> Clone or copy the script into your working directory.
+-> Ensure Node is installed (skip if running in browser).
+-> Open a terminal and execute:
+   node project.js
+-> or paste the file contents into the browser’s Developer Console.
+* No external libraries are required.
+
+
+6. Code Structure at a Glance:
+'use strict':
+Locks script into strict mode—eliminates silent errors, enforces declarations.
+
+Variable declarations:
+Stores student profile & initial scores array.
+
+Pure functions:
+total(), average(), grade(), eligible() keep logic modular & testable.
+
+Object literal:
+student aggregates state & exposes Summary() method.
+
+Loops:
+for & forEach iterate over score arrays for calculations & validation.
+
+Report switch:
+Single control block selects which report format to print.
+
+
+7. Function‑by‑Function Explanation
+
+total(scoreArray):
+Returns the sum of numeric elements using forEach.Rejects non‑number entries implicitly by bypassing validation—handled later in the script.
+
+average(scoreArray):
+Calls total() internally; divides by scoreArray.length to avoid duplicated arithmetic.
+
+grade(avg):
+switch(true) allows ranged conditions:
+avg ≥ 90 ⇒ A
+avg ≥ 75 ⇒ B
+avg ≥ 60 ⇒ C
+avg ≥ 40 ⇒ D
+else ⇒ F
+
+eligible(scoreArray):
+Confirms overall average ≥ 85.
+Iterates through each score, rejecting if any < 75.
+Returns descriptive eligibility string.
+
+student.Summary() (method):
+Wraps calls to total(), average(), grade(), and eligible(); outputs a multiline template‑literal report.
+
+8. Sample OUTPUT:
+Example based on [80, 90, 50] input array. 
+
+============================ Summary Method ===============================
+Student: Wasiq
+Course: computer science
+Total Marks: 220
+Average Marks: 73.33
+Grade : B
+Eligible : Not Eligible for Scholarship (Average < 85)
+Student Wasiq is enrolled in computer science with an average of 73.33 and has grade Grade : B
+
+
+9. Configuration & Extensibility
+
+Subjects:
+Replace or expand score1 array; all calculations auto‑scale.
+
+Grading scale:
+Edit grade() ranges.
+
+Scholarship rules:
+Adjust thresholds inside eligible().
+
+Report Types:
+Add new case blocks in the final switch(reportType).
+
+
+10. Known Limitations
+-> Input is hard‑coded; no user prompts or file I/O.
+-> Validation only flags first negative score then breaks.
+-> No separation of concerns; business logic and presentation reside in same script.
+
+11. Future Enhancements
+-> Interactive CLI
+-> Unit tests via Jest or Mocha to safeguard logic.
+-> Web front‑end with React or plain HTML/CSS for user‑friendly input.
