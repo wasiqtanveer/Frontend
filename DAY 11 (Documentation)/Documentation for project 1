@@ -120,5 +120,5 @@ Add new case blocks in the final switch(reportType).
 
 11. Future Enhancements
 -> Interactive CLI
--> Unit tests via Jest or Mocha to safeguard logic.
+-> Unit tests via Jest or Mocha to safeguard logic. 
 -> Web front‑end with React or plain HTML/CSS for user‑friendly input.
