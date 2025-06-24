@@ -1,0 +1,15 @@
+.intro
+{
+    background-color: #3B060A;
+    color: #FFF287;
+    font-size: larger;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration:underline;
+    border-radius: 40px
+}
+
+#hobby-1
+{
+    color: #8A0000;
+}
