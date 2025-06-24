@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Simple Todo List</title>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1 class="app-title">Task Manager</h1>
+            <p class="app-subtitle">Organize your day, achieve your goals</p>
+        </header>
+
+        <main class="main-card">
+            <section class="class-form-container">
+                <form id="taks-form" action="">
+                     <!-- Form inputs will be added in a future lab -->
+                </form>
+            </section>
+            <section class="tasks-container">
+                <div class="section-header">
+                    <h2 class="Section-title">My Tasks</h2>
+                    <nav>
+                        <button class="filter-button" >All</button>
+                        <button class="filter-button" >Active</button>
+                        <button class="filter-button" >Completed</button>
+                    </nav>
+                    <ul class="task-list">
+                        <!-- Task items will be dynamically inserted here -->
+                    </ul>
+                    <div class="task-summary">
+                        <p>
+                            <span id="items-left">0</span> items left
+                            <button id="clear-completed-button">Clear Completed</button>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="app-footer">
+            <p>Created with Html,CSS and Java script</p>
+        </footer>
+    </div>
+</body>
+</html>
