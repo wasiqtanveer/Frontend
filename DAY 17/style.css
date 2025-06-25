@@ -1,0 +1,51 @@
+main
+{
+    background-color: #FFEEA9;
+    padding:20px;
+    width: max-content;
+    border-radius: 30px;
+
+}
+header, .bio ,.skills , .experience, .contact
+{
+    background-color: #FFBF78;
+    border-radius: 10px;
+
+    :hover
+    {
+        background-color: aqua;
+    }
+}
+
+.skills li:first-child
+    {
+        color: aliceblue;
+    }
+.skills li:nth-child(3)
+{
+    color: white;
+}
+
+input:focus
+    {
+        background-color: black;
+    }
+
+a:link
+{
+    /* changes even while being static */
+    background-color: rgb(115, 100, 129);
+}
+a:visited
+{
+    color: white;
+}
+a:hover
+{
+    color: brown;
+}
+a:active
+{
+    /* changes when clicked */
+    color: chartreuse; 
+}
