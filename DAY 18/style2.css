@@ -1,0 +1,26 @@
+h1::first-letter
+{
+    font-size: 80px;
+    font-family: sans-serif
+
+}
+
+p::first-line
+{
+    background-color: rgb(20, 17, 17);
+    color: rgb(160, 255, 18)
+}
+
+li::before
+{
+    content: "✔";
+}
+
+.apple ::after
+{
+    content: "🍎";   
+}
+#banana ::after
+{
+    content: "🍌";
+}
