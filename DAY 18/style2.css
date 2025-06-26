@@ -16,11 +16,15 @@ li::before
     content: "✔";
 }
 
-.apple ::after
+.apple::after
 {
     content: "🍎";   
 }
-#banana ::after
+.orange::after
+{
+    content: "🍊";   
+}
+#banana::after
 {
     content: "🍌";
 }
