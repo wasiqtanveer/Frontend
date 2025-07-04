@@ -7,12 +7,12 @@
 </head>
 <body>
     <!-- This should be a proper header -->
-    <div class="site-header">
+    <header role="navigation"  class="site-header">
         <h1>City Tribune</h1>
         <p>Your source for local news</p>
         
         <!-- This should be navigation -->
-        <div class="main-menu">
+        <nav class="main-menu" aria-label="main-menu">
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Local</a></li>
@@ -20,9 +20,61 @@
                 <li><a href="">Sports</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
-        </div>
-    </div>
+        </nav>
+    </header>
     
-    <!-- Content will go here -->
+<!-- Add this after the header in your document -->
+<!-- This should be the main content area -->
+<main class="page-content">
+    <!-- This should be the main article -->
+    <article class="featured-story">
+        <h2>City Council Approves New Park</h2>
+        <p>Published: May 15, 2023</p>
+        <p>The city council unanimously approved the construction of a new park in the downtown area yesterday. The project will include playgrounds, walking trails, and a community garden.</p>
+        <p>Construction is expected to begin next month.</p>
+    </article>
+    
+    <!-- This should be a secondary content area -->
+     
+    <aside class="sidebar">
+        <section aria-label="current-updates">
+        <h3>Weather</h3>
+        <p>Today: 72°F, Sunny</p>
+        <p>Tomorrow: 68°F, Partly Cloudy</p>
+        </section>
+        
+        <section aria-label="Future-updates">
+        <h3>Upcoming Events</h3>
+        <ul>
+            <li>Farmers Market - Saturday</li>
+            <li>Community Concert - Sunday</li>
+        </ul>
+        </section>
+    </aside>
+</main>
+
+<!-- Add this after the main content in your document -->
+<!-- This should be a proper footer -->
+<footer class="site-footer">
+    <section class="footer-section">
+        <h3>About City Tribune</h3>
+        <p>Local news since 1982</p>
+        <p>Award-winning journalism</p>
+    </section>
+    
+    <section class="footer-section">
+        <h3>Contact Us</h3>
+        <p>123 News Street</p>
+        <p>Phone: (555) 123-4567</p>
+        <p>Email: info@citytribune.example</p>
+    </section>
+    
+    <section class="copyright">
+        <p>&copy; 2023 City Tribune News. All rights reserved.</p>
+    </section>
+</footer>
+
 </body>
 </html>
+
+
