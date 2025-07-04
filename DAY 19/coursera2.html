@@ -23,25 +23,27 @@
             <section class="tasks-container" role="region" aria-label="tasks-container">
                 <div class="section-header">
                     <h2 class="section-title">My Tasks</h2>
-                    <nav>
-                        <button class="filter-btn">all</button>
-                        <button class="filter-btn">active</button>
-                        <button class="filter-btn">completed</button>
+                    <nav role="navigation" aria-label="task filter options">
+                        <div role="tablist" aria-label="filter-tasks">
+                            <button role="tab" aria-controls="task-list" aria-label="true" class="filter-btn">all</button>
+                            <button role="tab" aria-controls="task-list" class="filter-btn">active</button>
+                            <button role="tab" aria-controls="task-list" class="filter-btn">completed</button>
+                        </div>
                     </nav>
                 </div>
                 
-                <ul id="task-list">
+                <ul id="task-list" role="tabpanel" aria-labelledby="task-list">
                     <!-- Task items will be dynamically inserted here -->
                 </ul>
                 
-                <div class="tasks-summary">
+                <div class="tasks-summary" role="status" aria-live="polite">
                     <p><span id="items-left">0</span> items left</p>
                     <button id="clear-completed-btn">Clear completed</button>
                 </div>
             </section>
         </main>
         
-        <footer class="app-footer">
+        <footer class="app-footer" role="contentinfo">
             <p>Created with HTML, CSS and JavaScript</p>
         </footer>
     </div>
