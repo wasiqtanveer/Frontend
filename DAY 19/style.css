@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    width: 100vw;
+    height: 10vh;
+    border: 3px solid ;
+}
+
+main
+{
+    width: 100vw;
+    height: 90vh;
+    border: 3px solid ;
+    float: right;
+}
+
+.sidebar
+{
+    width: 30vw;
+    border: 2px solid saddlebrown;
+    height: 100%;
+    background-color: tomato;
+    text-align: center;
+    font-size: xx-large;
+}
+.content
+{
+    width: 70vw;
+    border: 2px solid saddlebrown;
+    height: 100%;
+    background-color:burlywood;
+    text-align: center;
+    font-size: xx-large;
+}
