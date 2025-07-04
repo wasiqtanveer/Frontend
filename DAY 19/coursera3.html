@@ -12,14 +12,75 @@
     <form action="/register" method="post">
         <div>
             <label for="fullname">Full Name:</label>
-            <input type="text" id="fullname" name="fullname">
+            <input type="text" id="fullname" name="fullname" placeholder="Full name" required>
         </div>
         
         <div>
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email">
+            <label for="companyname">Company name:</label>
+            <input type="text" name="companyname" id="companyname" placeholder="Company Name">
         </div>
-        
+
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Email Address" required >
+        </div>
+            <!-- Add this inside your form, before the submit button -->
+        <div>
+            <label for="ticket-type">Ticket Type:</label>
+            <select id="ticket-type" name="ticket-type" required>
+                <option value="">-- Select a ticket type --</option>
+                <option value="standard">Standard ($99)</option>
+                <option value="premium">Premium ($199)</option>
+                <option value="vip">VIP ($299)</option>
+            </select>
+        </div>
+        <div>
+            <p>Which sessions are you interested in?</p>
+            <input type="checkbox" id="session-web" name="sessions" value="web" >
+            <label for="session-web">Web Development</label><br>
+            
+            <input type="checkbox" id="session-mobile" name="sessions" value="mobile">
+            <label for="session-mobile">Mobile Development</label><br>
+            
+            <input type="checkbox" id="session-data" name="sessions" value="data">
+            <label for="session-data">Data Science</label><br>
+            
+            <input type="checkbox" id="session-ai" name="sessions" value="data">
+            <label for="session-ai">AI and Machine Learning</label>
+        </div>
+        <div>
+            <p>How did you hear about us?</p>
+            <input type="radio" id="source-web" name="source" value="web" checked>
+            <label for="source-web">Website</label><br>
+            
+            <input type="radio" id="source-friend" name="source" value="friend">
+            <label for="source-friend">Friend</label><br>
+            
+            <input type="radio" id="source-other" name="source" value="other">
+            <label for="source-other">Other</label>
+        </div>
+
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <small>Format: 123-456-7890</small>
+            </div>
+            <div>
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" id="birthdate" name="birthdate" max="2005-01-01">
+            </div>
+            <div>
+                <label for="attendees">Number of Attendees:</label>
+                <input type="number" id="attendees" name="attendees" min="1" max="10" value="1">
+            </div>
+            <div>
+                <label for="special-requests">Special Requests:</label><br>
+                <textarea id="special-requests" name="special-requests" rows="4" cols="50" maxlength="200" placeholder="textarea"></textarea>
+            </div>
+
+
+
+
         <div>
             <input type="submit" value="Register Now">
         </div>
