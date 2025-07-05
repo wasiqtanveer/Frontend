@@ -19,10 +19,9 @@
                     <!-- Form inputs will be added in a future lab -->
                     <!-- Create a form group with label and text input for task description -->
                     <!-- Add validation to make task description required with minimum length -->
-                     
 
                     <label for="task-input" class="visually-hidden">Task Description</label>
-                    <input type="text" id="task-input" name="task" placeholder="What needs to be done?" required aria-required="true">
+                    <input type="text" id="task-input" name="task" placeholder="What needs to be done?" required aria-required="true" minlength="8">
                     <div class="form-group">
                         <label for="priority">Select Priority:</label>
                         <select name="priority" id="priority">
@@ -33,9 +32,12 @@
                         <br>
                         <!-- Create a form group with label and date input for task task date -->
                         <label for="task-date" class="visually-hidden">Due Date</label>
-                        <input type="date" id="task-date" name="task-date" aria-label="Due Date" required aria-required="true">
+                        <input type="date" id="task-date" name="task-date" aria-label="Due Date" required aria-required="true" required min="2025-07-04">
 
                     </div>
+                    <!-- Create an error display area for form validation messages -->
+                    <div id="error-message" class="error-message" aria-live="assertive"></div>
+                    
                 </form>
             </section>
             
