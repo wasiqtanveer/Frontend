@@ -73,6 +73,7 @@ nav ul li a
     border-radius: 1em;
     /* border box */
     box-sizing: border-box;
+    flex: 1;
 }
 .left ul li 
 {
@@ -93,11 +94,75 @@ nav ul li a
 
 .columns .right
 {
-    width: 75%;
+    flex: 3;
     border-radius: 1em;
     padding: 1em;
     box-sizing: border-box;
+    font-size: 1.6em;
 }
 
 
-/* ========================= styling the Main ========================= */
+/* ========================= styling the features ========================= */
+
+.features
+{
+    display: flex;
+    justify-content: space-between;
+    width: 98vw;
+    margin: 0.9em auto;
+    padding: 1em;
+    gap: 0.5em;
+    height: 65vh;
+    background-color: var(--secondary);
+    border-radius: 1em;
+}
+
+.features .box1,
+.features .box2,
+.features .box3
+{
+    flex: 1;
+    padding: 1em;
+    border-radius: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    /* make the text vertically centered as well */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ========================= styling the footer ========================= */
+footer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 98vw;
+    margin: 0.9em auto;
+    padding: 1em;
+    gap: 0.5em;
+    max-height: 50vh;
+
+    border-radius: 1em;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+footer a
+{
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--secondary);
+    padding: 0.5em;
+    border-radius: 1em;
+    
+    &:hover
+{
+    background-color: var(--tertiary);
+}
+}
+
+/* make the links line up perfectly */
+
+
