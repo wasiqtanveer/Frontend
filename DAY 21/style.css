@@ -1,0 +1,46 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, sans-serif;
+
+}
+
+header
+{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+.title
+{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000000;
+    padding: 10px;
+}
+
+nav ul
+{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+nav ul li a
+{
+    padding: 10px;
+    display: flex;
+}
+
+nav ul li a
+{
+    flex-direction: column;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
