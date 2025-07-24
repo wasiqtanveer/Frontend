@@ -100,7 +100,8 @@ main
     padding: 0.3em;
     border-radius: 10px;
     color: var(--accent); 
-    
+    display: grid;
+    grid-template-rows: 2fr 1fr;    
 }
 
 .notification
@@ -111,9 +112,49 @@ main
     color: var(--accent);
 }
 
+
+.main .summary
+{
+    background-color: var(--primary);
+    padding: 0.3em;
+    border-radius: 10px;
+    color: var(--secondary);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.3em;
+}
+.main .summary .box
+{
+    background-color: var(--primary-light);
+    border-radius: 10px;
+}
+
+
+.main .chart
+{
+    place-items: center;
+    margin: 2em;
+}
+
+footer
+{
+    padding: 1em;
+    margin: 0.3em;
+    border-radius: 10px;
+    background-color: var(--accent);
+    gap: 0.3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
 footer a
 {
-    color: var(--accent);
+    color: var(--secondary);
     text-decoration: none;
     font-weight: bold;
 }
+
+
+  
