@@ -1,0 +1,42 @@
+/* styling the whole body */
+*
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono';
+}
+
+:root
+{
+    --primary-color: #28443F;
+    --secondary-color: #F2FD7D;
+
+    --color-1 : #FBA002;
+    --color-2 : #313B2F;
+}
+
+/* ----------------------- styling header ------------------ */
+header 
+{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content:space-between;
+    font-size: 1.5em;
+    padding: 0.3em 1em;
+}
+
+header nav ul li a
+{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+header nav ul
+{
+    list-style:none;
+    display: flex;
+    gap:2rem;
+}
+
