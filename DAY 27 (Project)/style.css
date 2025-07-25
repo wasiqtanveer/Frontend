@@ -169,22 +169,41 @@ header nav ul
 
 .about-projects .card
 {
+    background-color: var(--primary-sec-color);
+    border-radius: 0.5em;
+    padding: 2em;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    
+    &:hover
+    {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        transform: scale(1.04);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.about-projects .card:hover a
+{
+    transition: all 0.3s ease-in-out;
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    border-radius: 0.5em;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
 }
+
+.about-projects .card a
 {
+    font-weight: bolder;
+    color: var(--secondary-color);
+    
     
 }
 
 
 
 
-
+/* ----------------------- styling skills ------------------ */
 
 
 
