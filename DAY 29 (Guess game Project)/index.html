@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess Game</title>
+</head>
+<body>
+    <main>
+        <section class="game">
+            <h1>Guess Game</h1>
+            <p>Guess a number between 1 and 100</p>
+
+            <!-- Placeholder for game content -->
+            <div class="player-part">
+                <label for="guess">Enter your guess:</label>
+                <input type="number" id="guess" name="guess" min="1" max="100">
+                <button id="submit-guess">Submit Guess</button>
+            </div>
+
+            <div class="result">
+                <div class="score">
+                    <p>Tries: <span id="tries">0</span></p>
+                    <p>Score: <span id="score">0</span></p>
+                    <p>High Score: <span id="high-score">0</span></p>
+                </div>
+                <div class="reset">
+                    <button id="reset-game">Reset Game</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
