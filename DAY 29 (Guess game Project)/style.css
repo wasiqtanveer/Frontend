@@ -4,3 +4,114 @@
     --primary-sec : #af7106 ;
     --text : #313B2F;
 }
+
+body
+{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:monospace;
+    background-color: var(--primary-sec);
+    color: var(--text);
+    font-size: 1.5em;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.game
+{
+    background-color: var(--primary);
+    width: auto;
+    padding: 2em;
+    border-radius: 3em;
+    border:  0.2em var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-part
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.player-part input
+{
+    background-color: var(--text);
+    color: var(--primary);
+    border: none;
+    padding: 1em;
+    width: 35%;
+    border-radius: 2em;
+    text-align: center;
+}
+
+.player-part input:active , 
+.player-part input::placeholder  
+{
+    color: var(--primary);
+    opacity: 0.3;
+    text-align: center;
+}
+
+.result .score {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* or use space-between for even spacing */
+    gap: 4em;
+
+}
+
+
+.result .score p {
+    min-width: 5em;
+    text-align: center;
+    background-color: var(--text);
+    border-radius: 1em;
+    padding: 0.5em;
+    color: var(--primary);
+}
+
+
+.result
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section button
+{
+    padding: 1em;
+    background-color: var(--text);
+    color: var(--primary);
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+section button:hover
+{
+    transform: scale(1.2);
+    color: var(--text);
+    background-color: var(--primary-sec);
+}
+
+section button:active
+{
+    transform: scale(1);
+}

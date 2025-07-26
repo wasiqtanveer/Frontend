@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Guess Game</title>
 </head>
 <body>
     <main>
         <section class="game">
             <h1>Guess Game</h1>
-            <p>Guess a number between 1 and 100</p>
+            <p>Guess a number between 1 and 10</p>
 
             <!-- Placeholder for game content -->
             <div class="player-part">
-                <label for="guess">Enter your guess:</label>
-                <input type="number" id="guess" name="guess" min="1" max="100">
+                <input type="number"  id="guess" name="guess" min="1" max="100" placeholder="Enter the number" required>
                 <button id="submit-guess">Submit Guess</button>
             </div>
 
@@ -24,7 +26,6 @@
                 <div class="score">
                     <p>Tries: <span id="tries">0</span></p>
                     <p>Score: <span id="score">0</span></p>
-                    <p>High Score: <span id="high-score">0</span></p>
                 </div>
                 <div class="reset">
                     <button id="reset-game">Reset Game</button>
@@ -32,5 +33,6 @@
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
