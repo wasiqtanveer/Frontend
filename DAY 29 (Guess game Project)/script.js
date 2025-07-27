@@ -32,7 +32,6 @@ submit.addEventListener("click", function()
     scoreSpan.textContent = score; // update the score
     playerguess = document.querySelector("#guess").value = ""; // clear the input field
     document.querySelector("#guess").focus();     // set cursor back to input
-
 });
 
 
