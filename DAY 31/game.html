@@ -13,25 +13,28 @@
 </head>
 <body>
     <main>
+        <section class="logo">
+            <img src="icons/pngtree-cartoon-hand-drawn-black-and-white-dice-vector-png-image_7156017.png" width="6%" alt="">
+        </section>
         <section class="top">
 
             <div class="score">
                 <h2>Score</h2>
-                <p id="score"></p>
+                <p id="score">0</p>
             </div>
             <div class="select">
-                <button class="btn btn-1">1</button>
-                <button class="btn btn-2">2</button>
-                <button class="btn btn-3">3</button>
-                <button class="btn btn-4">4</button>
-                <button class="btn btn-5">5</button>
-                <button class="btn btn-6">6</button>
+                <button id="btn-1" class="btn btn-1" value="1">1</button>
+                <button id="btn-2" class="btn btn-2" value="2">2</button>
+                <button id="btn-3" class="btn btn-3" value="3">3</button>
+                <button id="btn-4" class="btn btn-4" value="4">4</button>
+                <button id="btn-5" class="btn btn-5" value="5">5</button>
+                <button id="btn-6" class="btn btn-6" value="6">6</button>
             </div>
         </section>
 
         <section class="game">
             <div class="dice">
-                <img src="icons/dice-six-faces-three.svg" alt="" width="20%">
+                <img src="icons/dice-six-faces-three.svg" alt="" width="60%">
                 <p>click to roll</p>
             </div>
 
@@ -41,5 +44,6 @@
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
