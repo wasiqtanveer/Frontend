@@ -23,18 +23,18 @@
                 <p id="score">0</p>
             </div>
             <div class="select">
-                <button id="btn-1" class="btn btn-1" value="1">1</button>
-                <button id="btn-2" class="btn btn-2" value="2">2</button>
-                <button id="btn-3" class="btn btn-3" value="3">3</button>
-                <button id="btn-4" class="btn btn-4" value="4">4</button>
-                <button id="btn-5" class="btn btn-5" value="5">5</button>
-                <button id="btn-6" class="btn btn-6" value="6">6</button>
+                <button id="btn btn-1" class="btn" value="1">1</button>
+                <button id="btn btn-2" class="btn" value="2">2</button>
+                <button id="btn btn-3" class="btn" value="3">3</button>
+                <button id="btn btn-4" class="btn" value="4">4</button>
+                <button id="btn btn-5" class="btn" value="5">5</button>
+                <button id="btn btn-6" class="btn" value="6">6</button>
             </div>
         </section>
 
         <section class="game">
             <div class="dice">
-                <img src="icons/dice-six-faces-three.svg" alt="" width="60%">
+                <img id="dice" src="icons/dice-six-faces-one.svg" alt="" width="60%">
                 <p>click to roll</p>
             </div>
 
@@ -44,6 +44,18 @@
             </div>
         </section>
     </main>
+
+    <div class="overlay hidden" id="overlay"></div>
+    <section id="popup" >
+        <button id="close-popup">X</button>
+        <h2>GAME INSTRUCTIONS</h2>
+        <p>
+  Choose a number from 1 to 6 by clicking one of the buttons. Then click the "Roll Dice" button. 
+  If the dice shows the number you selected, you earn +1 point. Otherwise, your score stays the same. 
+  Use the "Reset" button to reset your score anytime. Good luck!
+</p>
+
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

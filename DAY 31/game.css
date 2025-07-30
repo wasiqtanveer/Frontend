@@ -12,6 +12,8 @@
     padding: 0;
 }
 
+
+
 .top
 {
     display: flex;
@@ -56,6 +58,10 @@
     align-items: center;
 }
 
+#btn-1
+{
+    
+}
 .score h2
 {
     font-weight: 300;
@@ -97,6 +103,23 @@
     gap: 1em;
 }
 
+.dice img
+{
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    border-radius: 1em;
+    
+}
+.dice img:hover
+{
+    transform: scale(1.1);
+}
+
+.dice img:active
+{
+    transform: scale(1.0);
+}
+
 .btns
 {
     flex: 1;
@@ -120,4 +143,47 @@
 {
     background-color:black;
     color: rgb(255, 255, 255);
+}
+
+#popup
+{
+    background-color: black;
+    color: white;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border: 2px solid white;
+    display: none;
+}
+
+#close-popup
+{
+    background-color: white;
+    color: black;
+    font-weight: 800;
+    border: none;
+    padding: 0.5em 0.8em;
+    margin-bottom:1em;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover
+    {
+        transform: scale(1.0);
+        background-color: var(--primary-sec);
+        color: var(--text);
+    }
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
 }
