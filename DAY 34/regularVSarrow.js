@@ -69,7 +69,23 @@ obj2.greetwithRegular() //undefined
 // • Write code that:
 // o Assigns a primitive to one variable and copies it to another — then mutate one and
 // observe results.
+let a = 20
+let b = a
+a = 30
+console.log(a);
+console.log(b);
+
 // o Assigns an object to one variable and copies it to another — then mutate a property and
 // observe results.
 
-// • Use console.log() to show how memory is shared or separated.
+// Objects
+let obj1 = { myname: "wasiq" };
+let obj22 = obj1;
+
+console.log("obj1.myname:", obj1.myname); // "wasiq"
+console.log("obj2.myname:", obj22.myname); // "wasiq"
+
+obj1 = { myname: "newname" };
+
+console.log("obj1.myname after change:", obj1.myname); // "newname"
+console.log("obj2.myname after change:", obj22.myname); // "wasiq" (still the old object)
