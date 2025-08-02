@@ -64,6 +64,7 @@ variable()
     
 /*----------------------------- 4 ------------------------------- */
 
+/*
 const object = 
 {
     myname : "wasiq",
@@ -74,4 +75,38 @@ const object =
     }
 }
 
-object.greet.call(object)
+// object.greet.call(object)
+//or
+object.greet()
+*/
+
+
+// function regular()
+// {
+//     console.log(this)
+// }
+
+// regular()
+
+// const arrowfunction = () =>
+// {
+//     console.log(this);
+    
+// }
+
+// arrowfunction()
+
+
+const obj =
+{
+    myname : "wasiq",
+    greet : function()
+    {
+        setTimeout(() => {
+            console.log("hello", this.myname);
+            
+        }, 1000);
+    } 
+}
+
+obj.greet()
