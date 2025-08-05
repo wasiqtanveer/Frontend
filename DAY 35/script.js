@@ -59,7 +59,21 @@ let copy =
     hobby : "football"
 }
 
+
+// • Show that the original object/array is unaffected (prove with logging).
 console.log(boy);
 console.log(copy);// will have an additional attribute
 
-// • Show that the original object/array is unaffected (prove with logging).
+
+// 4. Rest Pattern and Parameters
+// • Use the rest pattern to:
+//   ->Destructure an array where the first value is extracted and the rest are collected into
+//     another variable.
+let Destructure = [10,20,30,40,50]
+
+const [first,...rest] = Destructure
+console.log(first);
+console.log(rest);
+
+//   ->Create a function that accepts any number of parameters and sums them using the rest
+//     parameter.
