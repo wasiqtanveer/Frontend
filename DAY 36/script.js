@@ -81,3 +81,18 @@ console.log(summary.totalStudents);
 // • Access a nested property that may not exist, like student.address?.city
 // • Log a fallback if it's undefined.
 console.log(students.score?.mids); //returns undefined
+
+
+// 7. Looping Over Object Keys, Values, and Entries
+// • Use:
+// o Object.keys() to log all student property names
+
+console.log(Object.keys(students[1]));
+
+// o Object.values() to log all student property values
+console.log(Object.values(students[1]));
+// o Object.entries() to loop through and log key–value pairs for one student
+Object.entries(students[0]).forEach(([key , value])=>
+{
+      console.log(`${key}: ${value}`);
+})
