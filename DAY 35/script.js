@@ -77,3 +77,34 @@ console.log(rest);
 
 //   ->Create a function that accepts any number of parameters and sums them using the rest
 //     parameter.
+
+function sumAll(...numbers)
+{
+    let sum = 0
+
+    numbers.forEach(num => {
+        sum += num
+    });
+    return console.log(sum);
+}
+
+sumAll(1,2,3,4,5)
+sumAll(1,50)
+sumAll(1,2,3)
+
+
+
+// 5. Short Circuiting (&& and ||)
+// • Write code that uses || to assign a default value if a variable is falsy.
+let value = 0;
+
+let after = value || 30
+console.log(after);
+
+let city = ""
+let newCity = city || "Lahore"
+console.log(newCity);
+
+
+// • Use && to run a function only if a condition is true.
+// • Demonstrate this with at least two examples each.
