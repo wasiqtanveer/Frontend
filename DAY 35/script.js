@@ -96,6 +96,8 @@ sumAll(1,2,3)
 
 // 5. Short Circuiting (&& and ||)
 // • Write code that uses || to assign a default value if a variable is falsy.
+
+/* || sees the first condition if it is true it stops */
 let value = 0;
 
 let after = value || 30
@@ -107,4 +109,13 @@ console.log(newCity);
 
 
 // • Use && to run a function only if a condition is true.
+
+/* && sees the first condition if it is flase it stops */
+
+let havePermission = true
+havePermission && console.log("will print, as first one is true");
+
+let haveCar = false
+haveCar && console.log("wont print as the first one is flase");
+
 // • Demonstrate this with at least two examples each.
