@@ -50,3 +50,10 @@ let greet = function(city,country)
 }
 
 greet.apply(obj2,["kohat" , "Pakistan"]) // instead of passing arguments seperately apply help pass it in an array
+
+
+//bind
+// it makes a copy of the function call and uses it whenever needed,its same as call()
+console.log("-------------bind() method---------");
+let bind = hello.bind(obj2)
+bind()
