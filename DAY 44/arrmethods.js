@@ -18,3 +18,48 @@ console.log("the index of the last even number from the array is :", lastIndexEv
 
 let lessthan = array.some(number => number < 2)
 console.log(lessthan); // true
+
+
+//every()
+// it checks if all elements pass the test, if so it returns true
+// otherwise false
+
+let greaterthan = array.every(number => number > 0)
+console.log(greaterthan); // true
+
+
+
+//flat map()
+//Its a mixture of flat() and map() method
+// map() part → turned each num into [num, num*2]
+// → [[1,2], [2,4], [3,6]]
+
+// flat() part → removed one nesting level
+// → [1, 2, 2, 4, 3, 6]
+
+let newarr = [1,2,3]
+let flat = newarr.flatMap(number => [number, number * 2])
+
+console.log(flat);
+
+
+
+// sorted() and tosorted()
+// sorted() changes the original array
+// tosorted() returns a new sorted array without changing the original
+let unsort = [4,2,7,4,12,312,64,43,123,64]
+
+// sort() in JavaScript works differently for strings and numbers:
+// 1. By default, sort() converts elements to strings and sorts them alphabetically.
+//    Example: [10, 2, 30] becomes ["10", "2", "30"] → sorted as ["10", "2", "30"] → [10, 2, 30]
+// 2. For numbers, we must provide a compare function: (a, b) => a - b
+//    - If result < 0 → a comes before b
+//    - If result > 0 → b comes before a
+//    - If result = 0 → order stays the same
+
+unsort.sort((a, b) => a - b);
+console.log(unsort);
+
+//tosort()
+let sortto = unsort.toSorted((a,b) => a - b);
+console.log(sortto); 
