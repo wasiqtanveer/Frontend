@@ -63,3 +63,27 @@ console.log(unsort);
 //tosort()
 let sortto = unsort.toSorted((a,b) => a - b);
 console.log(sortto); 
+
+
+// let students = [
+//     { name: "John", age: 20 },
+//     { name: "Jane", age: 22 },
+//     { name: "Jim", age: 21 }
+// ];
+
+// let groupByAge = students.group(student => student.age);
+// console.log(groupByAge);
+
+
+let whole = [1,3,4,3,5,3]
+let done = whole.fill(0)
+console.log(done);
+
+
+// use case of with()
+
+let change = ["wasiq" , "haseeb","haziq", " faiq "]
+
+let after = change.with("wasiq" , "Atiq")
+console.log(change);//["wasiq" , "haseeb","haziq", " faiq "]
+console.log(after);//["Atiq" , "haseeb","haziq", " faiq "]
