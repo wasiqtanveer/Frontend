@@ -15,3 +15,4 @@ function sum(accumulator,current)
 
 // Method chaning
 // is used to call multiple methods on the same object in a single line of code.
+
