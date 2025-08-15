@@ -32,3 +32,27 @@ console.log(tipAmount.toFixed(2));
 // to show different rounding results of the total bill (bill + tip).
 let total = numBill + tipAmount;
 console.log(`The total bill is ${total}`); //
+
+
+
+// 3. Remainder Operator
+// • A restaurant has 7 seats per table. Check how many tables are fully occupied and how many
+// leftover people for:
+let customers = 45;
+let filled = Math.floor(customers/7)
+let left = customers % 7
+// o 45 customers
+console.log(`For ${customers} customers: ${filled} tables are filled, ${left} customers are left.`);
+// o 31 customers
+
+
+
+
+
+// 4. Numeric Separators
+// • Declare a large number like bank balance
+// const bankBalance = 1_000_000; // One million
+const bankBalance = 1_000_000; // One million
+console.log(`Bank Balance: $${bankBalance}`);
+// • Display the bank balance and comment on how numeric separators improve readability.
+// Numeric separators make large numbers easier to read by visually separating groups of digits.
