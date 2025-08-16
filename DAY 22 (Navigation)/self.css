@@ -1,0 +1,60 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: jetBrainsMono, monospace;
+    color: white;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: darkgreen;
+}
+
+nav ul
+{
+    display: flex;
+    gap: 2em;
+}
+
+nav ul li
+{
+    list-style: none;
+    gap: 1em;
+    background-color: aliceblue;
+    padding: 0.5em;
+    border-radius: 2em;
+}
+
+nav ul li a
+{
+    text-decoration: none;
+    color: darkgreen;
+    font-weight: 600;
+
+}
+
+/* styling hamburger */
+
+.hamburger {
+  flex-direction: column;
+  cursor: pointer;
+  gap: 7px;
+}
+
+.bar {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+

@@ -56,3 +56,6 @@ const bankBalance = 1_000_000; // One million
 console.log(`Bank Balance: $${bankBalance}`);
 // • Display the bank balance and comment on how numeric separators improve readability.
 // Numeric separators make large numbers easier to read by visually separating groups of digits.
+
+
+
