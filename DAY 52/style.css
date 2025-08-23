@@ -1,0 +1,31 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: rgb(29, 29, 29);
+}
+
+.container{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.slider-wrapper {
+    display: flex;
+    gap: 10px;   /* spacing between images */
+    padding: 10px;
+}
+
+.slider-wrapper img
+{
+    flex: 0 0 calc(33.33% - 20px); /* 3 images per row */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
