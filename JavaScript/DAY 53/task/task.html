@@ -7,18 +7,22 @@
 </head>
 <body>
     <label for="country-name">Enter country:</label>
-    <input type="text" id="country-name" value="wasiq" placeholder="Country name">
+    <input type="text" id="country-name" value="" placeholder="Country name">
     <button id="fetchData">Fetch Data</button>
 
 
 
     <script>
         
-        let country = "PAKISTAN";
-        let url = `https://restcountries.com/v3.1/name/${country}`;
-        let input = document.querySelector("country-name").value
         
-       
+        let submit = document.querySelector("#fetchData");
+
+        
+        
+       submit.addEventListener("click" , function()
+    {
+        let country = document.querySelector("#country-name").value;
+        let url = `https://restcountries.com/v3.1/name/${country}`;
 
         let xhr = new XMLHttpRequest();
         xhr.open('GET' , url)
@@ -47,9 +51,16 @@
             `            
             document.body.appendChild(newdiv);
         }
+        else
+        {
+            console.error("Error fetching data");
+            alert("Error fetching data");
+        }
         }
                
         xhr.send()
+    })
+        
     
     </script>
 </body>
