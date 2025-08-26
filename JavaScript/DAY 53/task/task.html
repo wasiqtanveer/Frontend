@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="country-name">Enter country:</label>
+    <input type="text" id="country-name" value="wasiq" placeholder="Country name">
+    <button id="fetchData">Fetch Data</button>
+
+
+
+    <script>
+        
+        let country = "PAKISTAN";
+        let url = `https://restcountries.com/v3.1/name/${country}`;
+        let input = document.querySelector("country-name").value
+        
+       
+
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET' , url)
+
+
+
+        xhr.onreadystatechange = function()
+        {
+            if (xhr.readyState === 4)
+        {
+            let data;
+            data = JSON.parse(xhr.responseText)
+            let capital = data[0].capital[0]
+            let currency = Object.values(Object.values(data[0].currencies)[0])[1]
+            let population = data[0].population
+            let flag = data[0].flags.png
+
+            // adding info to the page
+            let newdiv = document.createElement("div")
+            newdiv.innerHTML =`
+                <h1>country : ${country}</h1>
+                <p>Capital : ${capital}</p>
+                <p>Currency : ${currency}</p>
+                <p>Population : ${population}</p>
+                <img src="${flag}" alt="countries flag png link">
+            `            
+            document.body.appendChild(newdiv);
+        }
+        }
+               
+        xhr.send()
+    
+    </script>
+</body>
+</html>

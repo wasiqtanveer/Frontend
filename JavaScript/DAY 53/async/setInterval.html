@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello set interval</h1>
+
+    <button id="stop">STOP</button>
+    <button id="start">START</button>
+
+    <script>
+
+        let stop = document.getElementById("stop")
+        let start = document.getElementById("start")
+        let go;
+
+
+        //code to change background color with interval
+        const randomColor = function()
+        {
+          let hex = "0123456789ABCDEF"
+          let color = "#"
+
+          for (let i=0; i<6; i++)
+        {
+          color += hex[Math.floor(Math.random()*16)]
+        }
+
+        return color
+        }
+
+
+        //code to start printing wasiq and current time when clicked start
+        start.addEventListener("click" , function(){ 
+            go = setInterval(()=>{
+                console.log("wasiq", Date.now());
+                document.querySelector("h1").innerHTML ="interval started"
+                document.body.style.backgroundColor = randomColor()
+                
+            },1000)
+            console.log("interval Started");
+            
+        })
+        
+        stop.addEventListener("click",function()
+        {
+            clearInterval(go)
+            document.querySelector("h1").innerHTML ="interval Stopped"
+            console.log("interval Stopped");
+            
+        })  
+
+        // setInterval(()=>{
+        //     console.log("wasiq", Date.now());
+            
+        // },3000)
+    </script>
+  </body>
+</html>

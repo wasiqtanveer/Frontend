@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello wasiq</h1>
+    <button id="stop">stop</button>
+    
+    <script>
+
+        //this function logs (hello wasiq)
+        const hello = function()
+        {
+            console.log("hello wasiq");        
+        }
+
+        //this funciton changes and prints bye wasiq on the page
+        const change = function()
+        {
+            document.querySelector("h1").innerHTML = "bye wasiq"
+        }
+
+        const timeoutId = setTimeout(hello, 3000)
+
+
+        //it targets the stop button and calls a cleartime to a set timeout
+        document.getElementById("stop").addEventListener("click", function()
+        {
+            clearTimeout(timeoutId)
+            console.log("Stopped");
+            
+        })
+
+    
+    
+    </script>
+</body>
+</html>

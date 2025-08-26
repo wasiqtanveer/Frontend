@@ -1,5 +1,5 @@
-let country = "pakistan";
-let url = `https://restcountrie.com/v3.1/name/${country}`;
+let country = "Italy";
+let url = `https://restcountries.com/v3.1/name/${country}`;
 fetch(url)
 .then(response => response.json())
 .then(data => 
