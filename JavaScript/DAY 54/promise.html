@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+    let country = prompt("Enter the city name : ");
+    //api url
+    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${country}&appid=89c10c7f87c88b4b93e2a98cc14a8a19`;
+    
+    async function weatherdata()
+    {
+        try{
+
+            let response = await fetch(URL); // waits for the fetch to complete, as fetch returns a promise
+
+            if(!response.ok)
+        {
+            throw new Error(response.status);
+        }
+
+            
+            let api = await response.json();// .json() also returns a promise
+            console.log(api);
+
+
+            let cityName = api.name
+            let country = api.sys.country
+            let description = api.weather[0].description
+            let temprature = api.main.temp
+
+        console.log(`
+city name : ${cityName}
+country : ${country}
+description : ${description}
+temprature : ${(temprature-271.5).toFixed(2)} C
+        `);
+        
+        
+        }
+
+
+        catch(error)
+        {
+            console.log(error+"\nCity not found");
+        }
+
+        
+    }
+    weatherdata()
+    
+    
+    
+    
+    </script>    
+</body>
+</html>
