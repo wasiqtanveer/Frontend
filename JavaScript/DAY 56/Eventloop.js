@@ -27,3 +27,34 @@ console.log("start 2");
 // start 2
 // promise Resolved
 // setTimeout
+
+
+function simulateApi(success)
+{
+    return new Promise((resolve,reject) =>
+    {
+        setTimeout(() =>
+        {
+            if(success)
+            {
+                resolve("data Fetched")
+            }
+
+            else
+            {
+                reject("Fetching Failed")
+            }
+        },1000)
+    })
+}
+
+simulateApi(1) // gave one so as to give the dilusion of true
+.then((data) =>
+{
+    console.log(data);    
+})
+.catch((error) =>
+{
+    console.log(error);
+    
+})
