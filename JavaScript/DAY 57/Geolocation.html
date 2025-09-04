@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let longitude, latitude;
+        let URL = `https://api.opencagedata.com/geocode/v1/json?q=52.5432379%2C+13.4142133&key=dfd4d3c3f6454ece934029c77a503c6a`
+
+        function getPosition()
+        {
+            return new Promise((resolve,reject) =>
+        {
+            navigator.geolocation.getCurrentPosition(resolve,reject);
+        });
+        }
+
+
+        async function call()
+        {
+            try
+            {
+                let position = await getPosition()
+                latitude = position.coords.latitude;
+                longitude = position.coords.longitude;
+                console.log(`Latitude : ${Math.abs(latitude)}° ${position.coords.latitude >= 0 ? "N" : "S"}`);
+                console.log(`Longitude : ${Math.abs(longitude)}° ${position.coords.longitude >= 0 ? "E" : "W"}`);
+                
+            
+            }
+            catch(error)
+            {
+                console.log(error);
+                
+            }
+        }
+
+        
+        async function reverseGeocode(lat,lon)
+        {
+            let response = await fetch(URL);
+            let data = await response.json();
+            console.log(data.results[0].formatted);
+        }
+
+
+        call()
+        reverseGeocode(latitude,longitude)
+
+    </script>
+  </body>
+</html>
