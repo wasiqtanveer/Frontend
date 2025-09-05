@@ -16,24 +16,29 @@
             <!-- search area in the main content -->
             <div id="search">
               <form>
-                  <i class="fas fa-search"></i>
-                <input type="text" placeholder="What to cook/bake?" />
+                  <i id="search-icon" class="fas fa-search"></i>
+                <input id="input" type="text" placeholder="What to cook/bake?" />
               </form>
             </div>
+
 
             <!-- result area in the main content -->
              <!-- will be initially hidden and is triggered by the search -->
             <div class="result">
                 <h3><b>Here is your recipe for...</b></h3>
-                <p>dish</p>
-                <!-- <img src="https://via.placeholder.com/150" alt=""> -->
+                <p id="dish-name" >dish</p>
+                <img id="dish-image"  src="https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg" alt="" width="">
+
+                <!-- Category -->
                 <div class="cat">
                     <h3><b>Category:</b></h3>
-                    <p>dessert</p>
+                    <p id="category">dessert</p>
                 </div>
+
+                <!-- Instructions -->
                 <h3><b>Instructions </b></h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui ipsum quia voluptates, eligendi eius voluptate sunt laudantium cumque, repudiandae fugit nostrum modi totam corporis tempora reprehenderit quidem provident recusandae!
+                <p id="instructions">
+                    Instructions will be displayed here.
                 </p>
             </div>
         </div>
