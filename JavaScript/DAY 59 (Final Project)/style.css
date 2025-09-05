@@ -29,6 +29,45 @@ main
     height: 100%;
 }
 
+/* adding styles for the search area */
+form
+{
+    display: flex;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: rgba(0, 0, 0, 0.247) ;
+    border-radius: 10em;
+    gap: 0.8em;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:hover
+    {
+        transform: scale(1.03);
+    }
+
+}
+
+form input
+{
+    border: none;
+    background-color: rgba(44, 37, 37, 0.247) ;
+    border-radius: 10em;
+    font-size: 1em;
+    min-width: 30vw;
+    font-weight:600;
+    font-size: 1.2em;
+    transition: all 1s ease-in-out;
+    color: white;
+
+    &:focus
+    {
+       outline: none;
+    }
+ 
+}
+
 /* Applying styles to #wrapper */
 #wrapper {
     display: flex;
@@ -48,10 +87,16 @@ main
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
 }
 
+
+/* allow to instructions to break gracefully
+ */
 .result {
   width: 100%;
   max-width: 500px; /* or whatever fits your design */
   box-sizing: border-box;
-  /* height: fit-content;  // not needed for text wrapping */
   word-break: break-word; /* ensures long words break nicely */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
 }
