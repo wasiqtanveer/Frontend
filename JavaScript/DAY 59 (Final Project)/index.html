@@ -5,22 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cook.com</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
     <main>
       <h1>Welcome to cook.com</h1>
-      <section id="main-contect">
-        <div id="search">
-          <form>
-            <div class="search logo invert">
-              <img src="svgs/search.svg" alt="search" />
+      <section id="main-content">
+        <div id="wrapper">
+            <div id="search">
+              <form>
+                  <i class="fas fa-search"></i>
+                <input type="text" placeholder="What to cook/bake?" />
+              </form>
             </div>
-            <input type="text" placeholder="What do you want to play?" />
-          </form>
+            <div class="result">
+                <h3><b>Here is your recipe for...</b></h3>
+                <p>dish</p>
+                <img src="https://via.placeholder.com/150" alt="">
+                <div class="cat">
+                    <p>category:</p>
+                    <p>dessert</p>
+                </div>
+                <h3><b>Instructions </b></h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo qui ipsum quia voluptates, eligendi eius voluptate sunt laudantium cumque, repudiandae fugit nostrum modi totam corporis tempora reprehenderit quidem provident recusandae!
+                </p>
+            </div>
         </div>
       </section>
     </main>
-
-    <script src="script.js"></script>
-  </body>
+   </body>
+<script src="script.js"></script>
 </html>

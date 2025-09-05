@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: jetbrains mono;
+    color: white;
+}
+
+body{
+    background-image: url(https://muffingroup.com/blog/wp-content/uploads/2023/05/rachel-park-hrlvr2ZlUNk-unsplash.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#main-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    height: 100%;
+}
+
+/* Applying styles to #wrapper */
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.144);
+    border-radius: 10px;
+    height: fit-content;
+
+    /* gives glass effect to the background */
+    backdrop-filter: blur(9px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.473);
+}
+
+.result {
+  width: 100%;
+  max-width: 500px; /* or whatever fits your design */
+  box-sizing: border-box;
+  /* height: fit-content;  // not needed for text wrapping */
+  word-break: break-word; /* ensures long words break nicely */
+}
