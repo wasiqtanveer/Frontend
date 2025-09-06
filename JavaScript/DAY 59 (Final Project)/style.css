@@ -105,7 +105,18 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 0.5em;
-  display: none; /* initially hidden */
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
+  opacity: 1;
+  pointer-events: auto;
+  position: static;
+}
+
+.result.hidden {
+
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1);
 }
 
 /* styling instructions */
