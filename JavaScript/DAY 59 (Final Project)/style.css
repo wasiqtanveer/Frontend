@@ -139,3 +139,19 @@ main, #main-content, #wrapper {
   justify-content: center;
  
 }
+
+
+@media (max-width: 768px) {
+  #main-content {
+    width: 95%;
+  }
+  form {
+    width: 100%;
+  }
+  form input {
+    font-size: 1em;
+  }
+  #instructions {
+    max-height: 250px; /* more room on mobile */
+  }
+}

@@ -1,0 +1,142 @@
+# 🍳 Cook.com – Recipe Finder
+
+## 📌 Overview
+
+Cook.com is a simple web application that allows users to search for recipes by dish name. It fetches data from **TheMealDB API** and displays details such as the dish name, category, image, and instructions. The UI is styled with a glassmorphic design and is responsive across desktop and mobile devices.
+
+---
+
+## 🚀 Features
+
+* 🔎 **Search Recipes** by dish name
+* 📷 Displays **dish image**
+* 🏷️ Shows the **category** (e.g., Dessert, Breakfast, etc.)
+* 📖 Provides **step-by-step instructions**
+* ❌ Handles errors (no recipe found or empty search input)
+* 🎨 Responsive design with glassmorphism
+* 📱 Mobile-friendly UI
+
+---
+
+## 🛠️ Tech Stack
+
+* **HTML5** – Structure
+* **CSS3** – Styling & responsiveness
+* **JavaScript (ES6+)** – Logic & API calls
+* **TheMealDB API** – Recipe data source
+
+---
+
+## 📂 Project Structure
+
+```
+cook.com/
+│── index.html      # Main HTML file
+│── style.css       # Stylesheet
+│── script.js       # JavaScript logic
+```
+
+---
+
+## ⚙️ How It Works
+
+1. The user enters a dish name into the search bar.
+2. On form submission, the input is validated.
+
+   * If empty → shows alert and hides results.
+   * If valid → sends a request to **TheMealDB API**.
+3. API response is parsed.
+
+   * If no result → shows alert and hides results.
+   * If found → displays dish details inside the result section.
+4. Results are revealed with a smooth transition.
+
+---
+
+## 📜 Code Explanation
+
+### **1. JavaScript (`script.js`)**
+
+* **Selectors:** Fetches DOM elements (`search bar, dish name, category, image, instructions, result container`).
+* **API Call:** Uses `fetch()` with async/await to retrieve JSON data.
+* **Error Handling:** Checks if `data.meals` exists, otherwise alerts the user.
+* **UI Update:** Updates text, image, and instructions dynamically.
+* **Event Listener:** Listens for form submission and triggers the API call.
+
+### **2. HTML (`index.html`)**
+
+* **Search Section:** Input field + search icon inside a form.
+* **Result Section:** Hidden by default, revealed only after a successful search.
+* **Dish Details:** Displays recipe name, image, category, and instructions.
+
+### **3. CSS (`style.css`)**
+
+* **Glassmorphism UI:** Semi-transparent backgrounds + blur effect.
+* **Form Styling:** Rounded input field with hover scale effect.
+* **Responsive Layout:** Uses flexbox and media queries for adaptability.
+* **Smooth Transitions:** Result visibility managed by opacity and transform animations.
+
+---
+
+## 🌐 API Reference
+
+This project uses **TheMealDB API**:
+
+```
+https://www.themealdb.com/api/json/v1/1/search.php?s=<dish_name>
+```
+
+* Example:
+
+```
+https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
+```
+
+* **Response Example:**
+
+```json
+{
+  "meals": [
+    {
+      "strMeal": "Spicy Arrabiata Penne",
+      "strCategory": "Vegetarian",
+      "strMealThumb": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+      "strInstructions": "Bring a large pot of water to a boil..."
+    }
+  ]
+}
+```
+
+---
+
+## 📱 Responsiveness
+
+* On **desktop:** Search box and results are centered with fixed width.
+* On **mobile/tablet:** Content stretches to full width, instructions box expands for readability.
+
+---
+
+## ⚡ Usage
+
+1. Open `index.html` in a browser.
+2. Enter a dish name (e.g., "Pasta").
+3. Hit **Enter** → Recipe details appear.
+4. If no recipe is found → "No recipe found!" alert appears.
+
+---
+
+## 🔮 Future Improvements
+
+* Add **ingredients list** and **measurements** from API.
+* Support **random recipe** feature.
+* Add **save to favorites** using local storage.
+* Improve UI with animations and dark/light theme toggle.
+
+---
+
+## 👨‍💻 Author
+
+**Muhammad Wasiq Tanveer**
+Simple recipe search app using TheMealDB API.
+
+

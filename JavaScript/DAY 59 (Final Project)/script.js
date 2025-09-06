@@ -34,9 +34,11 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (input.value.trim() === "") {
         alert("Please enter a dish name!");
+        result.classList.add("hidden"); // hide result if empty input
         return;
     }
 
     url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${input.value}`;
     apiCall();
+    input.value = ""; // clear input field after search
 });
