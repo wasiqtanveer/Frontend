@@ -5,7 +5,7 @@ let category = document.getElementById("category");
 let dishImage = document.getElementById("dish-image");
 let instructions = document.getElementById("instructions");
 
-let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=Chicken Handi`
+let url;
 
 // async that dictates what happens on api call
 async function apiCall()
@@ -24,11 +24,18 @@ async function apiCall()
     
 }
 
-apiCall()
 
-search.addEventListener('click',() => 
-{
 
+let form = document.querySelector("#search form");
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (input.value.trim() === "") {
+        alert("Please enter a dish name!");
+        return;
+    }
+    document.getElementById("result").style.display = "block";
+    url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${input.value}`;
+    apiCall();
 });
 
 
