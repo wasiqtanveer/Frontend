@@ -51,7 +51,7 @@ function simulateApi(success)
 simulateApi(1) // gave one so as to give the dilusion of true
 .then((data) =>
 {
-    console.log(data);    
+    console.log(data);     x
 })
 .catch((error) =>
 {
